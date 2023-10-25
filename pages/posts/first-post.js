@@ -2,10 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image'
 import Head from 'next/head';
 import Script from 'next/script';
+import Layout from '../../components/layout';
 
 export default function FirstPost() {
     return (
-        <>
+        <Layout>
             <Head>
                 <title>First Post</title>
                 <Script
@@ -17,15 +18,15 @@ export default function FirstPost() {
 
             <h1>First Post</h1>
 
-            <Image
+
+
+            <Link href="/">Back to home</Link>
+            {/* <Image
             src="/images/profile.jpg"
             height={200}
             width={200}
             alt='barkley'
-            ></Image>
-
-            <Link href="/">Back to home</Link>
-        </>
-
+            ></Image> */}
+        </Layout>
     );
   }
